@@ -45,7 +45,7 @@ import argparse
 import cv2
 import numpy as np
 import scipy.misc
-import slmpy
+# import slmpy
 import imutils
 
 # construct the argument parse and parse the arguments
@@ -133,10 +133,10 @@ def apply_correction_mask(image):
 
 if slmFlag == True:
     # create the object that handles the SLM array
-    slm = slmpy.SLMdisplay(isImageLock = True)
-
+#    slm = slmpy.SLMdisplay(isImageLock = True)
+    ImResX, ImResY = 1024, 768
     # retrieve SLM resolution (defined in monitor options)
-    ImgResX, ImgResY = slm.getSize()
+#    ImgResX, ImgResY = slm.getSize()
 else:
 
     ImgResX = 792
@@ -240,12 +240,12 @@ else:
         cv2.imshow('SLM',image)
 
         # send image to SLM
-        slm.updateArray(image8bit)
+#        slm.updateArray(image8bit)
 
         # press 'q' to exit
         key = cv2.waitKey(33)
         if key == ord('q'):
             break
 
-    slm.close()
+#    slm.close()
     cv2.destroyAllWindows()

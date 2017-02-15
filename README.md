@@ -4,8 +4,10 @@ Set of routines in Python used to control a Spatial Light Modulator. It is assum
 **Important!!!** The code requires the following modules installed:
 * opencv
 * numpy
-* wxPython 
-* slmpy (file that can be downloaded from [Sébastien's POPOFF](http://wavefrontshaping.net/index.php/57-community/tutorials/spatial-lights-modulators-slms/124-how-to-control-a-slm-with-python)) page.
+* *(wxPython)*
+* *(slmpy)* (file that can be downloaded from [Sébastien's POPOFF](http://wavefrontshaping.net/index.php/57-community/tutorials/spatial-lights-modulators-slms/124-how-to-control-a-slm-with-python)) page.
+
+*Note by C.A.: currently wxPython and slmpy are disabled for simulation only.*
 
 ## Files
 
@@ -38,7 +40,7 @@ To exit, press 'q' after clicking on the 'phase mask' window.
 * To generate and send to the SLM a phase mask for a LG beam with charge -5, use `python generate_Laguerre_Gauss_SLM.py -c -5 -m -s`. Notice that the option **-m** specifies to use the correction mask provided by the manufacturer.
 
 ### generate_Laguerre_Gauss_split_SLM.py
-Program that splits the SLM into two equal regions and in each region generates a phase mask of an independent Laguerre Gauss beam with a CHARGE provided by the user. 
+Program that splits the SLM into two equal regions and in each region generates a phase mask of an independent Laguerre Gauss beam with a CHARGE provided by the user.
 
 The whole image is sent to the second monitor output where the SLM is connected. The mask generated is also shown in the main monitor in a small window.
 
